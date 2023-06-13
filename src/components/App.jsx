@@ -14,16 +14,6 @@ const App = () => {
   const contacts = useSelector(state => state.friend.contacts);
   const filter = useSelector(state => state.friend.filter);
 
-  // useEffect(() => {
-  //   const contacts = localStorage.getItem('contacts');
-  //   if (contacts) {
-  //     dispatch(addContact(JSON.parse(contacts)));
-  //   }
-  // }, [dispatch]);
-
-  // useEffect(() => {
-  //   localStorage.setItem('contacts', JSON.stringify(contacts));
-  // }, [contacts]);
 
   const handleAddContact = newContact => {
     console.log(newContact);
