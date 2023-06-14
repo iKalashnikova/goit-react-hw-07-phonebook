@@ -24,7 +24,7 @@ export const contactsSlice = createSlice({
       })
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.contacts = action.payload;
+        state.contacts.items = action.payload;
       })
       .addCase(fetchContacts.rejected, (state, action) => {
         state.isLoading = false;
@@ -36,7 +36,7 @@ export const contactsSlice = createSlice({
       })
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.contacts = [...state.contacts, action.payload ]
+        state.contacts.items = [...state.contacts.items, action.payload ]
       })
       .addCase(addContact.rejected, (state, action) => {
         state.isLoading = false;
@@ -48,7 +48,7 @@ export const contactsSlice = createSlice({
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.contacts =  state.contacts.filter(contact => contact.id !== action.payload);
+        state.contacts.items =  state.contacts.items.filter(contact => contact.id !== action.payload);
       })
       .addCase(deleteContact.rejected, (state, action) => {
         state.isLoading = false;
