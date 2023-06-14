@@ -5,7 +5,6 @@ import { contactsSlice } from './slice';
 export const store = configureStore({
   reducer: {
     friend: contactsSlice.reducer, 
-
   },
 
 });

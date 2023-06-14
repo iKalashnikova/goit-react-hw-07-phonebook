@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import ContactForm from './Form/form';
@@ -6,13 +6,19 @@ import { ContactList } from './Contact/Contact';
 import { Filter } from './Filter/Filter';
 import { Title } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact, filterContact } from './redux/slice';
+import { addContact, fetchContacts} from './redux/actions';
+import {filterContact} from './redux/slice'
 
 const App = () => {
 
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.friend.contacts);
+  const contacts = useSelector(state => state.friend.contacts.contact);
   const filter = useSelector(state => state.friend.filter);
+
+
+  useEffect(() => {
+    dispatch(fetchContacts())
+  }, [dispatch])
 
 
   const handleAddContact = newContact => {

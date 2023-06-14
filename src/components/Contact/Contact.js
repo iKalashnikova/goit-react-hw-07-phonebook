@@ -1,7 +1,7 @@
 import React from "react"
 import { ContactEl, ContactItem, ContactName, DeleteBtn } from './Contact.styled';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from "components/redux/slice";
+import { deleteContact } from "../redux/actions";
 
 
 export const ContactList = ({contacts}) => {
