@@ -5,7 +5,7 @@ export const contactsSlice = createSlice({
   name: 'friend',
   initialState: {
     contacts: {
-      contact: [],
+      items: [],
       isLoading: false,
       error: null,
     },

@@ -12,7 +12,7 @@ import {filterContact} from './redux/slice'
 const App = () => {
 
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.friend.contacts.contact);
+  const contacts = useSelector(state => state.friend.contacts.item);
   const filter = useSelector(state => state.friend.filter);
 
 
