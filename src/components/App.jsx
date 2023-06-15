@@ -57,14 +57,14 @@ const App = () => {
 
   return (
     <GridContainer
-      // style={{
+      style={{
       //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       //   fontSize: 40,
       //   color: '#010101',
-      // }}
+      }}
     >
       <div>
         <Title>Phonebook</Title>

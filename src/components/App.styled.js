@@ -6,8 +6,8 @@ font-size: 48px;
 `
 
 export const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  padding: 32px;
+  // display: grid;
+  // grid-template-columns: 2fr 2fr;
+  // gap: 32px;
+  // padding: 32px;
 `;
