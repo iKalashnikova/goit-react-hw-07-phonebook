@@ -14,7 +14,7 @@ export const fetchContactsAPI = async () => {
 export const addContactAPI = async (contactData) => {
   try {
     const response = await axios.post(API_URL, contactData);
-    return response
+    return response.data
   } catch (error) {
     throw new Error('Failed to add contact');
   }

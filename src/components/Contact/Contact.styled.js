@@ -6,11 +6,14 @@ export const ContactEl = styled.ul`
 `
 
 export const ContactItem = styled.li`
- display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  font-size: 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 16px;
+font-size: 24px;
+border: 1px solid #ccc;
+padding: 16px;
+border-radius: 4px;
 `
 export const ContactName = styled.p`
  font-size: 20px;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ContactForm from './Form/form';
 import { ContactList } from './Contact/Contact';
 import { Filter } from './Filter/Filter';
-import { Title } from './App.styled';
+import { Title, GridContainer } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact, fetchContacts} from './redux/actions';
 import {filterContact} from './redux/slice'
@@ -56,15 +56,15 @@ const App = () => {
   console.log(visibleContact);
 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
+    <GridContainer
+      // style={{
+      //   height: '100vh',
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      //   alignItems: 'center',
+      //   fontSize: 40,
+      //   color: '#010101',
+      // }}
     >
       <div>
         <Title>Phonebook</Title>
@@ -80,7 +80,7 @@ const App = () => {
           contacts={visibleContact}
         />
       </div>
-    </div>
+    </GridContainer>
   );
 };
 
